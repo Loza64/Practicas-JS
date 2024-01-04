@@ -1,0 +1,24 @@
+{
+  "name": "laboratorio-09",
+  "version": "1.0.0",
+  "description": "Laboratorio 09 by Roberto Loza",
+  "main": "Index.js",
+  "scripts": {
+    "start": "node Index.js",
+    "dev": "DEBUG=movies-api:* nodemon Index.js"
+  },
+  "author": "Roberto Loza",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}

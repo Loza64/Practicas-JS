@@ -1,0 +1,18 @@
+@use '../utils/' as u;
+
+.notifications-head{
+ @include u.RowSpacingContent;
+
+ span{
+  color: white;
+  background-color: u.$details-color;
+  padding: 1px 10px;
+  border-radius: 5px;
+ }
+ 
+ label{
+  color: u.$details-color;
+  font-weight: 900;
+  cursor: pointer;
+ }
+}

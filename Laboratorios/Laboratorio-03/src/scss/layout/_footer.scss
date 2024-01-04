@@ -1,0 +1,42 @@
+footer {
+ background-color: black;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ padding: 20px;
+ margin-top: 40px;
+
+ #footer-img{
+  margin-top: -8rem;
+ }
+
+ #footer-links {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  text-align: center;
+  margin: 20px;;
+
+  a {
+   color: white;
+   text-decoration: none;
+   transition: all .3s ease-in-out;
+  }
+
+  a:hover {
+   color: gray;
+  }
+ }
+ #social-media{
+  text-align: center;
+  margin: 20px;
+ }
+}
+
+@media  (max-width: 568px) {
+ footer{
+  flex-direction: column;
+  #footer-links{
+   grid-template-columns: auto;
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Linus Benedict Torvalds",
+    "birthday": "28/12/1969",
+    "nationality": "Finnish",
+    "age": 53,
+    "creatorOf": [
+        {
+            "technology": "Linux Kernel",
+            "description": "Open-source Unix-like operating system core"
+        },
+        {
+            "technology": "Git",
+            "description": "Distributed version control system"
+        }
+    ],
+    "occupation": "Software Engineer",
+    "educationLevel": "Master's degree in Computer Science",
+    "university": "University of Helsinki",
+    "hobbies": [
+        "Soccer",
+        "VideoGames",
+        "Guitar",
+        "Math"
+    ],
+    "favoriteColor": "Blue",
+    "height": 177
+}

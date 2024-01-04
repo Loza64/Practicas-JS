@@ -1,0 +1,182 @@
+:root {
+ --theme-main-text: #faf9ff;
+ --theme-active-text: #fbd606;
+ --theme-main-color: #343353;
+ --theme-button: #ef4e5d;
+ --theme-button-hover: #ec4152;
+}
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+
+body {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ background-color: #faf9ff;
+}
+
+h1 {
+ text-align: start;
+ color: #333;
+}
+
+header {
+ width: 100%;
+ height: auto;
+ padding: 1.6vh 5vw;
+ background-color: var(--theme-main-color);
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+ header {
+  padding: 1.6vh 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+ }
+
+ nav>a {
+  font-size: 1rem;
+ }
+}
+
+
+header>h1 {
+ color: var(--theme-main-text);
+}
+
+nav {
+ display: flex;
+ align-items: center;
+ vertical-align: middle;
+}
+
+a {
+ font-size: 1.2rem;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+a.active {
+ color: var(--theme-active-text);
+}
+
+nav>a {
+ margin-left: 2vw;
+ margin-right: 2vw;
+ color: var(--theme-main-text);
+}
+
+hr {
+ width: 92vw;
+}
+
+footer {
+ width: 100%;
+ text-align: center;
+ padding: 2rem;
+ background-color: #343353;
+ color: #fff;
+ margin-top: auto;
+}
+
+footer p {
+ color: #fff;
+ font-size: 1.2rem;
+ line-height: 1.6;
+}
+
+footer p a {
+ color: #fff;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+#contact-container {
+ margin: 2rem;
+ padding: 2rem;
+ background-color: #fff;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ display: flex;
+}
+
+.contact-content {
+ display: flex;
+ flex: 1;
+ align-items: center;
+}
+
+.contact-hero {
+ flex: 1;
+ padding-right: 2rem;
+}
+
+.contact-hero img {
+ width: 100%;
+}
+
+#contact-form {
+ flex: 1;
+}
+
+.form-group {
+ margin-bottom: 1rem;
+}
+
+label {
+ display: block;
+ margin-bottom: 0.5rem;
+ font-weight: bold;
+}
+
+input,
+textarea {
+ width: 100%;
+ padding: 0.5rem;
+ font-size: 1rem;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
+
+textarea {
+ resize: vertical;
+}
+
+button {
+ background-color: #343353;
+ color: #fff;
+ padding: 0.75rem 1rem;
+ font-size: 1rem;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+button:hover {
+ background-color: #565678;
+}
+
+@media screen and (max-width: 768px) {
+ .contact-container {
+  flex-direction: row;
+ }
+
+ .contact-hero {
+  display: none;
+ }
+
+ #contact-form {
+  margin-top: 0;
+ }
+}

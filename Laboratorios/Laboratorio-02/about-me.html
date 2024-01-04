@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <title>Laboratorio 01 - About me</title>
+    <link rel="stylesheet" href="assets/css/about-me.css">
+</head>
+<body>
+    <header>
+        <h1>About me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a class="active" href="about-me.html">About me</a>
+            <a href="hobbies.html">Hoobies</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <hr>
+    <section class="grid">
+        <!-- Profile picture -->
+        <figure class="profile-picture">
+            <img  src="./assets/img/profile.png" alt="Profile picture">
+        </figure>
+
+        <div class="information">
+            <!-- Information about me -->
+            <div class="d-flex-column about-me">
+                <p>
+                    In the hallowed halls of academia, there resides a brilliant 
+                    mind with an insatiable curiosity for the digital realm - 
+                    a computer science student who, orchestrates the symphony 
+                    of code and algorithms. With every keystroke and line of code, 
+                    they transcend the ordinary and venture into the extraordinary, 
+                    unraveling the secrets of the virtual universe.
+                </p>
+                <a class="nav-btn" href="contact.html">Contact me</a>
+            </div>
+
+            <!-- My skills -->
+            <div class="d-flex-column skills">
+                <label for="skill-html">HTML</label>
+                <progress id="skill-html" value="90" max="100">90%</progress>
+                <label for="skill-css">CSS</label>
+                <progress id="skill-css" value="70" max="100">70%</progress>
+                <label for="skill-js">JS</label>
+                <progress id="skill-js" value="50" max="100">50%</progress>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Created by: <a href="https://github.com/your-username"
+                target="_blank">Your Name</a></p>
+    </footer>
+</body>
+</html>

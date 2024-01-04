@@ -1,0 +1,90 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+.container-list {
+ width: 100%;
+ padding: 10px;
+ background-color: rgb(224, 224, 224);
+ display: flex;
+ flex-flow: row wrap;
+ gap: 10px;
+ justify-content: center;
+}
+
+.container-list .item {
+ flex: 1 0 430px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ max-width: 430px;
+ gap: 3px;
+ height: auto;
+ background-color: rgb(255, 255, 255);
+ box-shadow: 10px 10px 10px gray;
+ padding: 10px;
+ border-radius: 15px;
+ transition: all .5s ease-in-out;
+}
+
+
+.container-list .item .head {
+ width: 100%;
+ text-align: center;
+ font-weight: 500;
+}
+
+.container-list .item .head label{
+ font-weight: 900;
+ font-size: 26px;
+}
+.container-list .item .body {
+ text-align: justify;
+}
+.container-list .item .body  p{
+ font-weight: 700;
+ margin: 10px 0;
+}
+.container-list .item .footer {
+ justify-content: center;
+ display: flex;
+ width: 100%;
+}
+
+.container-list .item .footer .btn {
+transition: all .1s ease-in-out;
+ background: transparent;
+ border: none;
+ padding: 10px 30px;
+ width: auto;
+ font-weight: 900;
+ width: 100%;
+ margin: 5px 6px;
+ font-weight: 800;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.container-list .item .footer .btn:active{
+ transform: scale(95%);
+}
+
+.container-list .item .footer .btn-succes {
+ background: green;
+ color: white;
+}
+
+.container-list .item .footer .btn-delete {
+ background: red;
+ color: white;
+}
+
+@media only screen and (max-width: 350px) {
+ .container-list .item .footer {
+  flex-direction: column;
+ }
+}

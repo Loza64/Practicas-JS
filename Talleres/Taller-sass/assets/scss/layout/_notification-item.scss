@@ -1,0 +1,66 @@
+@use '../utils/' as u;
+
+.item {
+  display: flex;
+  padding: 5px;
+  margin: 14px 0;
+
+  .head {
+    margin: 0 5px;
+  }
+
+  .head img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .body {
+    width: 100%;
+    .content {
+      color: rgb(131, 131, 131);
+      font-weight: 800;
+      width: 100%;
+    }
+
+    .flex-content{
+      display: flex;
+      justify-content: space-between;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .user {
+      font-weight: 900;
+      color: black;
+    }
+
+    .action {
+      font-weight: 900;
+      color: rgb(99, 99, 99);
+      cursor: pointer;
+    }
+
+    .action:active {
+      color: blue;
+    }
+
+    .footer{
+      color: rgb(99, 99, 99);
+      p{
+        background-color: rgb(216, 255, 253);
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+
+  }
+
+  li {
+    color: u.$state-item-color;
+    font-size: 16px;
+    margin: 0 10px;;
+  }
+
+}

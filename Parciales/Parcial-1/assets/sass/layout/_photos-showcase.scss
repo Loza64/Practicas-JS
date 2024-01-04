@@ -1,0 +1,45 @@
+#photos-showcase {
+ h3 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  color: white;
+  padding: 15px;
+ }
+
+ .photo-set {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  figure {
+   width:100%;
+   height: auto;
+   overflow: hidden;
+   transition: all .3s ease-in-out;
+   display: flex;
+   flex-direction: column;
+
+   img {
+    width: 500px;
+    height: 100%;
+   }
+
+   span{
+    background-color: white;
+    transform: translateX(-120%);
+    margin-top: -23px;
+    font-size: 20px;
+    font-weight: 900; 
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+   }
+  }
+
+  figure:hover{
+   width: 3500px;
+   span{
+    transform: translateX(0%);
+   }
+  }
+ }
+}

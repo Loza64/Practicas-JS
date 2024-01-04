@@ -1,0 +1,1 @@
+¿Que es sass y en que se diferencia de css tradicional? R/ es una hoja de estilos en cascada y a diferencia de css es que se puede diseñar de una manera mas ordenada.
