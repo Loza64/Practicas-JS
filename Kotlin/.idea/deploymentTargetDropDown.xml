@@ -11,6 +11,9 @@
       <entry key="SecondActivity">
         <State />
       </entry>
+      <entry key="ThirdActivity">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

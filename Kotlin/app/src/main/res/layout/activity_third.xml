@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Activities.ThirdActivity">
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
