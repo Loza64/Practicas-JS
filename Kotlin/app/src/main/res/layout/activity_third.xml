@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Activities.ThirdActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtInfo"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/txtInfo"
         android:layout_width="0dp"
@@ -22,7 +35,7 @@
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press me"
+        android:text="@string/press_me"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
