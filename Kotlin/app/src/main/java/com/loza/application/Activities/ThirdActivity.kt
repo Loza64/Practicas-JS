@@ -1,5 +1,6 @@
 package com.loza.application.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,7 +25,10 @@ class ThirdActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnStart -> {
                 val txtInfo = findViewById<AppCompatEditText>(R.id.txtInfo)
                 if(txtInfo.text.toString().isEmpty()){
-                    Log.i("Application", "Button pressed")
+                    //Redirection to new activity
+                    val intent = Intent(this, FourthActivity::class.java)
+                    intent.putExtra("ValueExample", txtInfo.text.toString()) //Save value'intent from FourthActivity
+                    startActivity(intent)
                 }else{
                     Log.i("Application", "Button with info: ${txtInfo?.text.toString()}")
                 }
