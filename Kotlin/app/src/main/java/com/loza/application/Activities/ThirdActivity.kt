@@ -23,14 +23,15 @@ class ThirdActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0?.id){
             R.id.btnStart -> {
-                val txtInfo = findViewById<AppCompatEditText>(R.id.txtInfo)
-                if(txtInfo.text.toString().isEmpty()){
-                    //Redirection to new activity
-                    val intent = Intent(this, FourthActivity::class.java)
-                    intent.putExtra("ValueExample", txtInfo.text.toString()) //Save value'intent from FourthActivity
+                val txtInfo = findViewById<AppCompatEditText>(R.id.txtInfo).text.toString()
+
+                val intent = Intent(this, FourthActivity::class.java)
+                if(txtInfo.isEmpty()){
+                    intent.putExtra("ValueExample", "No escribiste nada en la caja de texto")
                     startActivity(intent)
                 }else{
-                    Log.i("Application", "Button with info: ${txtInfo?.text.toString()}")
+                    intent.putExtra("ValueExample", "EL valor que ingresaste es: $txtInfo")
+                    startActivity(intent)
                 }
             }
         }
