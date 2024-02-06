@@ -20,7 +20,7 @@ class SaludoActivity : AppCompatActivity(), View.OnClickListener  {
             R.id.btnStart -> {
                 val txtInfo = findViewById<AppCompatEditText>(R.id.txtInfo).text.toString()
 
-                val intent = Intent(this, FourthActivity::class.java)
+                val intent = Intent(this, ResultSaludoActivity::class.java)
                 if(txtInfo.isEmpty()){
                     intent.putExtra("ValueExample", "No escribiste nada en la caja de texto")
                     startActivity(intent)
