@@ -1,9 +1,9 @@
-package com.loza.application
+package com.loza.application.ExerciseCode
 
 class Product private constructor(val name:String, val stock:Int, val price:Double){
 
     companion object{
-        fun getProduct(name:String, stock:Int, price:Double):Product{
+        fun getProduct(name:String, stock:Int, price:Double): Product {
             return Product(name, stock, price)
         }
 

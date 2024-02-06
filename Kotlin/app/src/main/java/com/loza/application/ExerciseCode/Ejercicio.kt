@@ -1,4 +1,4 @@
-package com.loza.application
+package com.loza.application.ExerciseCode
 
 /*
 Las entradas de cine suelen tener un precio diferente según la edad de los espectadores.

@@ -1,4 +1,4 @@
-package com.loza.application
+package com.loza.application.ExerciseCode
 
 fun main(){
 

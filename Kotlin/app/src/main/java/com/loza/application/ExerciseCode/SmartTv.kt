@@ -1,4 +1,4 @@
-package com.loza.application
+package com.loza.application.ExerciseCode
 
 class SmartTv {
     var name:String = ""

@@ -1,4 +1,4 @@
-package com.loza.application.Activities
+package com.loza.application.Activities.exercices
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,13 +8,10 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import com.loza.application.R
 
-class ThirdActivity : AppCompatActivity(), View.OnClickListener {
-
+class SaludoActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_third)
-
-        //Click Listeners
+        setContentView(R.layout.activity_saludo)
         findViewById<AppCompatButton>(R.id.btnStart).setOnClickListener(this)
     }
 
