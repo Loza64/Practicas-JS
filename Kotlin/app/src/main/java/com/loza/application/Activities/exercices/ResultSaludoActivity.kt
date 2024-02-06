@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatTextView
+import com.loza.application.Activities.MenuActivity
 import com.loza.application.R
 
 class ResultSaludoActivity : AppCompatActivity(), View.OnClickListener  {
@@ -22,7 +23,7 @@ class ResultSaludoActivity : AppCompatActivity(), View.OnClickListener  {
     override fun onClick(p0: View?) {
         when(p0?.id){
             R.id.btnReturn ->{
-                val intent = Intent(this, SaludoActivity::class.java)
+                val intent = Intent(this, MenuActivity::class.java)
                 startActivity(intent)
             }
         }
