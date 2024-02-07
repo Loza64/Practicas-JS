@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import com.loza.application.Activities.exercices.ImcCalculatorActivity
 import com.loza.application.Activities.exercices.SaludoActivity
 import com.loza.application.R
 
@@ -15,12 +16,17 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         findViewById<Button>(R.id.btnSaludo).setOnClickListener(this)
+        findViewById<Button>(R.id.btnCalculator).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btnSaludo -> {
                 val intent = Intent(this, SaludoActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btnCalculator ->{
+                val intent = Intent(this, ImcCalculatorActivity::class.java)
                 startActivity(intent)
             }
         }
