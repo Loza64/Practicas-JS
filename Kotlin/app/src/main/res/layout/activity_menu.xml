@@ -14,7 +14,6 @@
         android:text="Saludar"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-
         />
 
     <Button
@@ -24,7 +23,6 @@
         android:text="Calculadora"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-
         />
 
 </LinearLayout>

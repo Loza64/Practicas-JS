@@ -20,23 +20,12 @@ class ImcCalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imc_calculator)
         initComponents()
+        initListeners()
     }
 
     private fun initComponents(){
         cardMale = findViewById<CardView>(R.id.cardMale)
         cardFemale = findViewById<CardView>(R.id.cardFemale)
-    }
-
-    private fun initListeners(){
-        cardMale.setOnClickListener{
-            maleSelected = true
-            femaleSelected = false
-        }
-        cardFemale.setOnClickListener{
-            maleSelected = false
-            femaleSelected = true
-        }
-        setColor();
     }
 
     private fun getBackGround(isSelected:Boolean): Int{
@@ -51,6 +40,19 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private fun setColor(){
         cardMale.setCardBackgroundColor(getBackGround(maleSelected))
         cardFemale.setCardBackgroundColor(getBackGround(femaleSelected))
+    }
+
+    private fun initListeners(){
+        cardMale.setOnClickListener{
+            maleSelected = true
+            femaleSelected = false
+            setColor();
+        }
+        cardFemale.setOnClickListener{
+            maleSelected = false
+            femaleSelected = true
+            setColor();
+        }
     }
 
 }

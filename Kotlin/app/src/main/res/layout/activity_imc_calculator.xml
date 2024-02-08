@@ -33,15 +33,15 @@
                 android:src="@drawable/male"
                 android:padding="10dp"
                 app:tint="@color/white"
-                android:contentDescription="male" />
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="25dp"
-                android:text="Hombre" />
+                android:textSize="25sp"
+                android:text="@string/hombre" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
@@ -69,14 +69,14 @@
                 android:src="@drawable/female"
                 android:padding="10dp"
                 app:tint="@color/white"
-                android:contentDescription="male" />
+                android:contentDescription="@string/male" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="25dp"
-                android:text="Mujer" />
+                android:textSize="25sp"
+                android:text="@string/mujer" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 

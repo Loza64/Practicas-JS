@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Application</string>
     <string name="press_me">Press me</string>
+    <string name="todo">TODO</string>
+    <string name="male">male</string>
+    <string name="mujer">Mujer</string>
+    <string name="hombre">Hombre</string>
 </resources>
