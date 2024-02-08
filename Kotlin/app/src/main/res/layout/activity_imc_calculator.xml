@@ -10,14 +10,14 @@
     tools:context=".Activities.exercices.ImcCalculatorActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardMan"
+        android:id="@+id/cardMale"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginEnd="10dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cardWoman"
+        app:layout_constraintEnd_toStartOf="@+id/cardFemale"
         app:cardBackgroundColor="@color/background_component_selected"
         >
 
@@ -26,6 +26,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/male"
+                android:padding="10dp"
+                app:tint="@color/white"
+                android:contentDescription="male" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,13 +47,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardWoman"
+        android:id="@+id/cardFemale"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="10dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardMan"
+        app:layout_constraintStart_toEndOf="@+id/cardMale"
         app:layout_constraintEnd_toEndOf="parent"
         app:cardBackgroundColor="@color/background_component_selected"
         >
@@ -55,6 +63,13 @@
             android:orientation="vertical"
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/female"
+                android:padding="10dp"
+                app:tint="@color/white"
+                android:contentDescription="male" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
