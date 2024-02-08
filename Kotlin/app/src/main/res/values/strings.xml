@@ -5,4 +5,5 @@
     <string name="male">male</string>
     <string name="mujer">Mujer</string>
     <string name="hombre">Hombre</string>
+    <string name="female" />
 </resources>

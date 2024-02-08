@@ -30,10 +30,10 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/male"
                 android:padding="10dp"
                 app:tint="@color/white"
-                android:contentDescription="@string/todo" />
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_male"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,26 +57,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:cardBackgroundColor="@color/background_component_selected"
         >
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/female"
+                android:contentDescription="@string/female"
                 android:padding="10dp"
-                app:tint="@color/white"
-                android:contentDescription="@string/male" />
+                android:src="@drawable/ic_female"
+                app:tint="@color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/mujer"
                 android:textColor="@color/white"
-                android:textStyle="bold"
                 android:textSize="25sp"
-                android:text="@string/mujer" />
+                android:textStyle="bold" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 
