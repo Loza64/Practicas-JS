@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMale"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,8 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
-
+            android:gravity="center"
+            android:padding="17dp">
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -42,6 +43,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="25sp"
+                android:layout_marginTop="10dp"
                 android:text="@string/male" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -50,7 +52,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFemale"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="17dp">
 
             <ImageView
                 android:layout_width="100dp"
@@ -79,7 +82,8 @@
                 android:text="@string/female"
                 android:textColor="@color/white"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
 
@@ -87,7 +91,7 @@
         android:id="@+id/cardHeigth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@+id/cardMale"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,5 +140,159 @@
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeigth"
+        app:layout_constraintEnd_toStartOf="@+id/cardAge"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="10sp"
+        app:cardBackgroundColor="@color/background_component"
+        app:cardCornerRadius="15dp"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnWeightMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/background_fab"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="@color/white"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/subtract" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnWeightPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/background_fab"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/plus" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/cardPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardPeso"
+        android:layout_marginStart="10sp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/background_component"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/AgeMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/background_fab"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="@color/white"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/subtract"
+                    />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAgePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/background_fab"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/plus"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_fab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardPeso"
+        android:layout_marginTop="50dp"
+        android:text="@string/calculate"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
