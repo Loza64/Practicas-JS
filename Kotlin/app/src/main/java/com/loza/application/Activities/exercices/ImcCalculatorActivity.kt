@@ -4,9 +4,12 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import com.google.android.material.slider.RangeSlider
 import com.loza.application.R
+import java.text.DecimalFormat
 
 class ImcCalculatorActivity : AppCompatActivity() {
 
@@ -15,17 +18,21 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
     private lateinit var cardMale:CardView
     private lateinit var cardFemale:CardView
+    private lateinit var tvHeight:TextView
+    private lateinit var rsHeight:RangeSlider
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imc_calculator)
-        initComponents()
-        initListeners()
+        initUI()
+
     }
 
     private fun initComponents(){
-        cardMale = findViewById<CardView>(R.id.cardMale)
-        cardFemale = findViewById<CardView>(R.id.cardFemale)
+        cardMale = findViewById(R.id.cardMale)
+        cardFemale = findViewById(R.id.cardFemale)
+        tvHeight = findViewById(R.id.tvHeight)
+        rsHeight = findViewById(R.id.rsHeight)
     }
 
     private fun getBackGround(isSelected:Boolean): Int{
@@ -53,6 +60,17 @@ class ImcCalculatorActivity : AppCompatActivity() {
             femaleSelected = true
             setColor();
         }
+        rsHeight.addOnChangeListener { _, value, _ ->
+            val df = DecimalFormat("#.##")
+            var result = df.format(value)
+            tvHeight.text = "$result cm"
+        }
+    }
+
+    private fun initUI(){
+        initComponents()
+        setColor()
+        initListeners()
     }
 
 }
