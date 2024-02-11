@@ -257,7 +257,7 @@
                 android:layout_marginBottom="5dp"
                 >
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/AgeMin"
+                    android:id="@+id/btnAgeMin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:backgroundTint="@color/background_fab"
@@ -281,7 +281,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCalculate"
+        android:id="@+id/btnCalculateImc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background_fab"
