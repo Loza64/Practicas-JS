@@ -22,7 +22,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private var height = 120
     private var weight = 60
     private var age = 24
-    val imc = weight / (height/100).toDouble().pow(2)// Peso/(Altura en metros al cuadrado)
+    private var imc = 0.0
 
     private lateinit var cardMale:CardView
     private lateinit var cardFemale:CardView
@@ -138,13 +138,17 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
 
         btnCalculateImc.setOnClickListener {
+            imc = weight / (height/100).toDouble().pow(2)// Peso/(Altura en metros al cuadrado)
             if(imc < 18.5){
                 showAlertDialog("Su peso es bajo")
-            }else if(imc > 18.5 && imc <= 24.9 ){
+            }
+            if(imc > 18.5 && imc <= 24.9 ){
                 showAlertDialog("Su peso es normal")
-            }else if(imc < 25 && imc <= 29.9){
+            }
+            if(imc > 25 && imc <= 29.9){
                 showAlertDialog("Usted sufre de sobre peso")
-            }else if(imc > 30){
+            }
+            if(imc > 30){
                 showAlertDialog("Usted sufre de obesidad")
             }
         }
