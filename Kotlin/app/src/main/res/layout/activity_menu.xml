@@ -20,7 +20,7 @@
         android:id="@+id/btnCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculadora"
+        android:text="Calculadora Imc"
         android:layout_gravity="center"
         android:layout_margin="5dp"
         />

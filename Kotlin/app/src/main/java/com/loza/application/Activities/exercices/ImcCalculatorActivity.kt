@@ -22,7 +22,6 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private var height = 120
     private var weight = 60
     private var age = 24
-    private var imc = 0.0
 
     private lateinit var cardMale:CardView
     private lateinit var cardFemale:CardView
@@ -91,6 +90,13 @@ class ImcCalculatorActivity : AppCompatActivity() {
         cardFemale.setCardBackgroundColor(getBackGround(femaleSelected))
     }
 
+    // Peso/(Altura esta en metros al cuadrado)
+    private fun getImc(weight:Int,height:Int):Double{
+        val imc = weight / (height.toDouble()/100 * height.toDouble()/100)
+        val df = DecimalFormat("#.##")
+        return df.format(imc).toDouble()
+    }
+
     private fun initListeners(){
         cardMale.setOnClickListener{
             maleSelected = true
@@ -138,18 +144,20 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
 
         btnCalculateImc.setOnClickListener {
-            imc = weight / (height/100).toDouble().pow(2)// Peso/(Altura en metros al cuadrado)
+            val imc = getImc(weight, height)
             if(imc < 18.5){
-                showAlertDialog("Su peso es bajo")
+                showAlertDialog("Su peso es bajo, su imc es: $imc")
             }
-            if(imc > 18.5 && imc <= 24.9 ){
-                showAlertDialog("Su peso es normal")
+            else if(imc > 18.5 && imc <= 24.9 ){
+                showAlertDialog("Su peso es normal, su imc es: $imc")
             }
-            if(imc > 25 && imc <= 29.9){
-                showAlertDialog("Usted sufre de sobre peso")
+            else if(imc > 25 && imc <= 29.9){
+                showAlertDialog("Usted sufre de sobre peso, su imc es: $imc")
             }
-            if(imc > 30){
-                showAlertDialog("Usted sufre de obesidad")
+            else if(imc > 30){
+                showAlertDialog("Usted sufre de obesidad, su imc es: $imc")
+            }else{
+                showAlertDialog("Resultado no valido")
             }
         }
     }
