@@ -19,10 +19,10 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
     private var maleSelected = true
     private var femaleSelected = false
-    private var height = 120.0f
+    private var height = 120
     private var weight = 60
     private var age = 24
-    val imc = weight / (height/100).pow(2) // Peso/(Altura en m al cuadrado)
+    val imc = weight / (height/100).toDouble().pow(2)// Peso/(Altura en metros al cuadrado)
 
     private lateinit var cardMale:CardView
     private lateinit var cardFemale:CardView
@@ -105,14 +105,12 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
 
         rsHeight.addOnChangeListener { _, value, _ ->
-            val df = DecimalFormat("#.##")
-            height = value
-            var result = df.format(height)
-            tvHeight.text = "$result cm"
+            height = value.toInt()
+            tvHeight.text = "$height cm"
         }
 
         btnWeightMin.setOnClickListener{
-            if(weight < 18){
+            if(weight <= 18){
                 weight = 18
             }else{
                 weight -=1
@@ -126,7 +124,7 @@ class ImcCalculatorActivity : AppCompatActivity() {
         }
 
         btnAgeMin.setOnClickListener {
-            if(age < 18){
+            if(age <= 18){
                 age = 18
             }else{
                 age -=1
