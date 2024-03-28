@@ -2,10 +2,7 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="ImcCalculatorActivity">
-        <State />
-      </entry>
-      <entry key="MenuActivity">
+      <entry key="app">
         <State />
       </entry>
     </value>
